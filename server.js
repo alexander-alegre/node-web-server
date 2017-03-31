@@ -8,9 +8,9 @@ const port = process.env.PORT || 3000;
 var app = express();
 
 // maintenance page
-app.use( (req, res, next) => {
-    res.render('maintenance.hbs');
-});
+// app.use( (req, res, next) => {
+//     res.render('maintenance.hbs');
+// });
 
 
 hbs.registerPartials(__dirname + '/views/partials');
@@ -48,6 +48,13 @@ app.get('/about', (req, res) => {
         pageTitle: 'About Page'
     });
 });
+
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        
+    });
+});
+
 
 app.get('/bad', (req, res) => {
     res.send({
