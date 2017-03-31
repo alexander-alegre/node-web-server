@@ -39,19 +39,22 @@ hbs.registerHelper('screamIt', (text) => text.toUpperCase());
 app.get('/', (req, res) => {
     res.render('home.hbs', {
         pageTitle: 'Home Page',
-        welcomeMessage: 'Welcome to my site!'
+        welcomeMessage: 'Welcome to my site!',
+        docTitle: 'Home Page'
     });
 });
 
 app.get('/about', (req, res) => {
     res.render('about.hbs', {
-        pageTitle: 'About Page'
+        pageTitle: 'About Page',
+        docTitle: 'About Page'
     });
 });
 
 app.get('/projects', (req, res) => {
     res.render('projects.hbs', {
-        
+        pageTitle: 'My Projects',
+        docTitle: 'Projects Page'
     });
 });
 
